@@ -54,41 +54,41 @@ void myintdiv(int _n, int _d, int *_q, int *_r) {
 
 ```
 module  mydivider ( 
-		    output [15:0] per_dout,
-		    input 	      mclk,
-		    input [13:0]  per_addr,
-		    input [15:0]  per_din,
-		    input 	      per_en,
-		    input [1:0]   per_we,
-		    input 	      puc_rst
-		    );
+            output [15:0] per_dout,
+            input         mclk,
+            input [13:0]  per_addr,
+            input [15:0]  per_din,
+            input         per_en,
+            input [1:0]   per_we,
+            input         puc_rst
+            );
    
-   reg 				        reg_cin;         // memory mapped reg Cin   
-   reg [15: 0] 			  reg_N;           // memory-mapped numerator register
-   reg [15: 0] 			  reg_D;           // memory-mapped demoninator register 
+   reg                    reg_cin;         // memory mapped reg Cin   
+   reg [15: 0]            reg_N;           // memory-mapped numerator register
+   reg [15: 0]            reg_D;           // memory-mapped demoninator register 
    
-   reg [ 2: 0] 			  reg_state, nxt_state;  // FSM state register
+   reg [ 2: 0]            reg_state, nxt_state;  // FSM state register
    
-   reg 				        fsm_cout;        // FSM output (signal)
+   reg                    fsm_cout;        // FSM output (signal)
 
-   wire [15:0] 			  div_N;
-   wire [15:0] 			  div_D;
-   wire 			        div_start;
-   wire [7:0] 			  div_Q;
-   wire [15:0] 			  div_R;
-   wire 			        div_done;
+   wire [15:0]            div_N;
+   wire [15:0]            div_D;
+   wire                   div_start;
+   wire [7:0]             div_Q;
+   wire [15:0]            div_R;
+   wire                   div_done;
    divider divider1(.clk(mclk), 
-		    .reset(puc_rst),
-		    .N(div_N),  
-		    .D(div_D), 
-		    .start(div_start), 
-		    .Q(div_Q),
-		    .R(div_R),
-		    .done(div_done));
-
-   assign div_D = reg_D;      // from memory mapped register
-   assign div_N = reg_N;      // from memory mapped register
-   reg 	startcmd;
+            .reset(puc_rst),
+            .N(div_N),  
+            .D(div_D), 
+            .start(div_start), 
+            .Q(div_Q),
+            .R(div_R),
+            .done(div_done));
+   // divider inputs
+   assign div_D = reg_D;         // from memory mapped register
+   assign div_N = reg_N;         // from memory mapped register
+   reg  startcmd;
    assign div_start = startcmd;  // computed in fsm
       
    localparam 
@@ -97,12 +97,12 @@ module  mydivider (
      continuecompute = 3'd2, 
      waitsync0s = 3'd3;
 
-   wire 			  write_N;
-   wire 			  write_D;
-   wire 			  read_Q;
-   wire 			  read_R;
-   wire 			  write_Cin;
-   wire 			  read_Cout;
+   wire               write_N;
+   wire               write_D;
+   wire               read_Q;
+   wire               read_R;
+   wire               write_Cin;
+   wire               read_Cout;
    
    assign write_N   = (per_en & (per_addr == 14'hA0) &  per_we[0] &  per_we[1]);
    assign write_D   = (per_en & (per_addr == 14'hA1) &  per_we[0] &  per_we[1]);
@@ -115,53 +115,54 @@ module  mydivider (
    always @(posedge mclk or posedge puc_rst)
      if (puc_rst == 1'h1)
        begin
-	        reg_N     <= 16'h0;
-	        reg_D     <= 16'h0;
-	        reg_cin   <= 1'b0;
-          reg_state <= waitsync1s;
+         reg_N     <= 16'h0;
+         reg_D     <= 16'h0;
+         reg_cin   <= 1'b0;
+         reg_state <= waitsync1s;
        end
      else begin
-	        reg_N       <= write_N   ? per_din       : reg_N;
-	        reg_D       <= write_D   ? per_din       : reg_D;
-	        reg_cin     <= write_Cin ? per_din[0]    : reg_cin;
-          reg_state   <= nxt_state;
+         reg_N     <= write_N   ? per_din       : reg_N;
+         reg_D     <= write_D   ? per_din       : reg_D;
+         reg_cin   <= write_Cin ? per_din[0]    : reg_cin;
+         reg_state <= nxt_state;
      end
    
-   assign per_dout   = read_Q    ? {8'h0,div_Q} :
-		       read_R    ? div_R :
-		       read_Cout ? {15'h0, fsm_cout} :
-		       16'h0;
+   assign per_dout = read_Q    ? {8'h0,div_Q} :
+                     read_R    ? div_R :
+                     read_Cout ? {15'h0, fsm_cout} :
+                     16'h0;
    
    always @*
      begin
         nxt_state = reg_state;
-	fsm_cout  = 1'b0;	
-	startcmd = 1'b0;
+        fsm_cout  = 1'b0;   
+        startcmd = 1'b0;
+    
+     case (reg_state)
+      waitsync1s:
+            begin 
+              fsm_cout  = 1'b0;
+              nxt_state = reg_cin ? gocompute : waitsync1s;
+            end
+      gocompute: 
+            begin
+              fsm_cout  = 1'b1;
+              startcmd  = 1'b1;           
+              nxt_state = continuecompute;
+            end
+      continuecompute:
+           begin
+             fsm_cout  = 1'b1;
+             startcmd  = 1'b0;           
+             nxt_state = (div_done) ? waitsync0s : continuecompute;
+           end
+      waitsync0s: 
+           begin
+             fsm_cout  = 1'b1;
+             nxt_state = ~reg_cin ? waitsync1s : waitsync0s;
+          end
+    endcase
 	
-	case (reg_state)
-	  waitsync1s:
-         begin 
-           fsm_cout  = 1'b0;
-	         nxt_state = reg_cin ? gocompute : waitsync1s;
-         end
-	  gocompute: 
-	      begin
-          fsm_cout  = 1'b1;
-	        startcmd  = 1'b1;	       
-	        nxt_state = continuecompute;
-	      end
-	  continuecompute:
-	      begin
-          fsm_cout  = 1'b1;
-	        startcmd  = 1'b0;	       
-	        nxt_state = (div_done) ? waitsync0s : continuecompute;
-	      end
-	  waitsync0s: 
-        begin
-          fsm_cout  = 1'b1;
-	        nxt_state = ~reg_cin ? waitsync1s : waitsync0s;
-        end
-	  endcase   
   end
    
 endmodule
