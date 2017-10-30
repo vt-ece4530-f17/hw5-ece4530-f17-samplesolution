@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/cygwin/home/local/hw5-ece4530-f17-patrickschaumont/msp430de/hardware/msp430de1soc/msp430
+vdivider
+!s110 1508988991
+!i10b 1
+!s100 ZSJRS>m_GRzEXYB`=4AaX2
+IGJ@^]o:B<11kao?ZF7h5a3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/cygwin/home/local/hw5-ece4530-f17-patrickschaumont/msp430de_div/hardware/msp430de1soc/msp430
+w1508970210
+8divider.v
+Fdivider.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1508988991.000000
+!s107 divider.v|
+!s90 divider.v|
+!i113 1
+Z3 tCvgOpt 0
+vmydivider
+!s110 1508989023
+!i10b 1
+!s100 <9D^2KZC^fVPfH<bJ:DJ=2
+IlJG>DfJP=zY87e@dge2al3
+R0
+R1
+w1508971016
+8mydivider.v
+Fmydivider.v
+L0 63
+R2
+r1
+!s85 0
+31
+!s108 1508989023.000000
+!s107 mydivider.v|
+!s90 mydivider.v|
+!i113 1
+R3

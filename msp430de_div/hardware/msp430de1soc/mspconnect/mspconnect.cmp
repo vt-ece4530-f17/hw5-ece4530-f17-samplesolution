@@ -1,0 +1,11 @@
+	component mspconnect is
+		port (
+			clk_clk                        : in  std_logic := 'X'; -- clk
+			reset_reset_n                  : in  std_logic := 'X'; -- reset_n
+			rs232_0_external_interface_RXD : in  std_logic := 'X'; -- RXD
+			rs232_0_external_interface_TXD : out std_logic;        -- TXD
+			rs232_1_external_interface_RXD : in  std_logic := 'X'; -- RXD
+			rs232_1_external_interface_TXD : out std_logic         -- TXD
+		);
+	end component mspconnect;
+

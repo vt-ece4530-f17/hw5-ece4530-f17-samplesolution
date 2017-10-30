@@ -1,0 +1,650 @@
+
+led.elf:     file format elf32-msp430
+
+SYMBOL TABLE:
+0000fffe l    d  __reset_vector	00000000 __reset_vector
+0000fc00 l    d  .rodata	00000000 .rodata
+0000fc00 l    d  .rodata2	00000000 .rodata2
+0000fc00 l    d  .text	00000000 .text
+00000200 l    d  .data	00000000 .data
+00000210 l    d  .bss	00000000 .bss
+00000210 l    d  .noinit	00000000 .noinit
+00000210 l    d  .heap	00000000 .heap
+00000000 l    d  .MSP430.attributes	00000000 .MSP430.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    df *ABS*	00000000 c:/ti/msp430_gcc/bin/../lib/gcc/msp430-elf/6.2.1/../../../../msp430-elf/lib/430/crt0-minrt.o
+0000fffe l       __reset_vector	00000000 __msp430_resetvec_hook
+00000000 l    df *ABS*	00000000 crt_movedata.o
+00000000 l    df *ABS*	00000000 crt_main_minrt.o
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 omsp_de1soc.c
+00000000 l    df *ABS*	00000000 omsp_delay.c
+00000000 l    df *ABS*	00000000 omsp_uart.c
+00000000 l    df *ABS*	00000000 srai.o
+00000000 l    df *ABS*	00000000 srli.o
+00000000 l    df *ABS*	00000000 lib_a-memmove.o
+00000000 l    df *ABS*	00000000 
+0000fc00 l       .text	00000000 _start
+0000fd22 g     F .text	00000012 putchar
+00000022 g       *ABS*	00000000 P1DIR
+0000fd14 g     F .text	0000000e uartinit
+0000fdd0 g       .text	00000000 .hidden __mspabi_srli_9
+0000fd56 g       .text	00000000 .hidden __mspabi_srai_6
+0000fd60 g       .text	00000000 .hidden __mspabi_srai_1
+0000fe20 g       .text	00000000 .hidden __mspabi_srll_10
+0000fdcc g       .text	00000000 .hidden __mspabi_srli_10
+0000fd82 g       .text	00000000 .hidden __mspabi_sral_10
+0000fd72 g       .text	00000000 .hidden __mspabi_sral_14
+0000fdb8 g       .text	00000000 .hidden __mspabi_srli_15
+0000fe6c g     F .text	0000003c memmove
+0000fde4 g       .text	00000000 .hidden __mspabi_srli_4
+0000fcd2 g     F .text	00000006 de1soc_ledr
+0000fce6 g     F .text	00000006 de1soc_hexhi
+0000fd86 g       .text	00000000 .hidden __mspabi_sral_9
+0000fdd8 g       .text	00000000 .hidden __mspabi_srli_7
+0000fe32 g       .text	00000000 .hidden __mspabi_srll_7
+0000fe4a g       .text	00000000 .hidden __mspabi_srll_3
+0000fd92 g       .text	00000000 .hidden __mspabi_sral_6
+0000fda6 g       .text	00000000 .hidden __mspabi_sral_1
+0000fd36 g       .text	00000000 .hidden __mspabi_func_epilog_6
+0000fd44 g       .text	00000000 .hidden __mspabi_srai_15
+0000fe0e g       .text	00000000 .hidden __mspabi_srll_13
+0000fcec g     F .text	00000006 short_delay
+0000fdc4 g       .text	00000000 .hidden __mspabi_srli_12
+0000002a g       *ABS*	00000000 P2DIR
+00000120 g       *ABS*	00000000 WDTCTL
+0000fd5e g       .text	00000000 .hidden __mspabi_srai_2
+0000fd5c g       .text	00000000 .hidden __mspabi_srai_3
+0000fc00 g     F .text	00000004 __crt0_start
+00000214 g       .heap	00000000 __HeapLimit
+00000214 g       .heap	00000000 __heap_end__
+0000fcf2 g     F .text	00000022 long_delay
+0000fd4e g       .text	00000000 .hidden __mspabi_srai_10
+0000fd40 g       .text	00000000 .hidden __mspabi_func_epilog_1
+0000fcd8 g     F .text	0000000e de1soc_hexlo
+0000fd3c g       .text	00000000 .hidden __mspabi_func_epilog_3
+0000fe3e g       .text	00000000 .hidden __mspabi_srll_5
+0000fdfc g       .text	00000000 .hidden __mspabi_srli
+0000fe1a g       .text	00000000 .hidden __mspabi_srll_11
+0000fde0 g       .text	00000000 .hidden __mspabi_srli_5
+00000210 g       .noinit	00000000 end
+0000fd7e g       .text	00000000 .hidden __mspabi_sral_11
+0000fd6e g       .text	00000000 .hidden __mspabi_sral_15
+0000fd54 g       .text	00000000 .hidden __mspabi_srai_7
+0000fe38 g       .text	00000000 .hidden __mspabi_srll_6
+0000fd9a g       .text	00000000 .hidden __mspabi_sral_4
+0000fdf0 g       .text	00000000 .hidden __mspabi_srli_1
+0000fe08 g       .text	00000000 .hidden __mspabi_srll_14
+0000fd68 g       .text	00000000 .hidden __mspabi_srai
+0000fd4a g       .text	00000000 .hidden __mspabi_srai_12
+0000fdbc g       .text	00000000 .hidden __mspabi_srli_14
+00000010 g       *ABS*	00000000 __romdatacopysize
+0000fd8e g       .text	00000000 .hidden __mspabi_sral_7
+0000fd52 g       .text	00000000 .hidden __mspabi_srai_8
+0000fdc8 g       .text	00000000 .hidden __mspabi_srli_11
+0000fda2 g       .text	00000000 .hidden __mspabi_sral_2
+00000000  w      *ABS*	00000000 __rom_highdatacopysize
+0000fc1e g     F .text	0000008e main
+0000fd50 g       .text	00000000 .hidden __mspabi_srai_9
+0000fd4c g       .text	00000000 .hidden __mspabi_srai_11
+0000fe44 g       .text	00000000 .hidden __mspabi_srll_4
+0000fdec g       .text	00000000 .hidden __mspabi_srli_2
+00000210 g       .heap	00000000 __heap_start__
+0000fdb2 g       .text	00000000 .hidden __mspabi_sral
+00000000  w      *ABS*	00000000 __high_bsssize
+00000000  w      *ABS*	00000000 __rom_highdatastart
+0000fd8a g       .text	00000000 .hidden __mspabi_sral_8
+0000fd76 g       .text	00000000 .hidden __mspabi_sral_13
+0000fe14 g       .text	00000000 .hidden __mspabi_srll_12
+0000fea8 g       *ABS*	00000000 __romdatastart
+0000fd5a g       .text	00000000 .hidden __mspabi_srai_4
+0000fddc g       .text	00000000 .hidden __mspabi_srli_6
+0000fde8 g       .text	00000000 .hidden __mspabi_srli_3
+00000021 g       *ABS*	00000000 P1OUT
+00000000  w      *ABS*	00000000 __high_datastart
+00000000  w      *ABS*	00000000 __upper_data_init
+0000fd38 g       .text	00000000 .hidden __mspabi_func_epilog_5
+0000fd46 g       .text	00000000 .hidden __mspabi_srai_14
+00002200 g       .MSP430.attributes	00000000 __stack
+0000fe26 g       .text	00000000 .hidden __mspabi_srll_9
+00000200 g     O .data	00000010 c16
+0000fcac g     F .text	00000026 de1soc_init
+0000fd9e g       .text	00000000 .hidden __mspabi_sral_3
+00000210 g       .data	00000000 _edata
+0000fd7a g       .text	00000000 .hidden __mspabi_sral_12
+00000210 g       .heap	00000000 _end
+0000fe66 g       .text	00000000 .hidden __mspabi_srll
+00000000  w      *ABS*	00000000 __high_bssstart
+0000fe02 g       .text	00000000 .hidden __mspabi_srll_15
+0000fd58 g       .text	00000000 .hidden __mspabi_srai_5
+0000fd48 g       .text	00000000 .hidden __mspabi_srai_13
+0000fdc0 g       .text	00000000 .hidden __mspabi_srli_13
+00000200 g       .data	00000000 __datastart
+0000fe2c g       .text	00000000 .hidden __mspabi_srll_8
+0000fe56 g       .text	00000000 .hidden __mspabi_srll_1
+0000fc18 g     F .text	00000006 __crt0_call_just_main
+0000fc04 g     F .text	00000014 __crt0_movedata
+0000fd3e g       .text	00000000 .hidden __mspabi_func_epilog_2
+0000fd96 g       .text	00000000 .hidden __mspabi_sral_5
+0000fd34 g       .text	00000000 .hidden __mspabi_func_epilog_7
+0000fd3a g       .text	00000000 .hidden __mspabi_func_epilog_4
+0000fe50 g       .text	00000000 .hidden __mspabi_srll_2
+0000fdd4 g       .text	00000000 .hidden __mspabi_srli_8
+
+
+
+Disassembly of section .text:
+
+0000fc00 <__crt0_start>:
+    fc00:	31 40 00 22 	mov	#8704,	r1	;#0x2200
+
+0000fc04 <__crt0_movedata>:
+    fc04:	3c 40 00 02 	mov	#512,	r12	;#0x0200
+
+0000fc08 <.Loc.116.1>:
+    fc08:	3d 40 a8 fe 	mov	#65192,	r13	;#0xfea8
+
+0000fc0c <.Loc.119.1>:
+    fc0c:	0d 9c       	cmp	r12,	r13	;
+
+0000fc0e <.Loc.120.1>:
+    fc0e:	04 24       	jz	$+10     	;abs 0xfc18
+
+0000fc10 <.Loc.122.1>:
+    fc10:	3e 40 10 00 	mov	#16,	r14	;#0x0010
+
+0000fc14 <.Loc.124.1>:
+    fc14:	b0 12 6c fe 	call	#65132		;#0xfe6c
+
+0000fc18 <__crt0_call_just_main>:
+    fc18:	0c 43       	clr	r12		;
+
+0000fc1a <.Loc.181.1>:
+    fc1a:	b0 12 1e fc 	call	#64542		;#0xfc1e
+
+0000fc1e <main>:
+    fc1e:	0a 12       	push	r10		;
+    fc20:	09 12       	push	r9		;
+    fc22:	08 12       	push	r8		;
+    fc24:	07 12       	push	r7		;
+    fc26:	06 12       	push	r6		;
+    fc28:	05 12       	push	r5		;
+    fc2a:	04 12       	push	r4		;
+    fc2c:	b0 12 ac fc 	call	#64684		;#0xfcac
+    fc30:	47 43       	clr.b	r7		;
+    fc32:	55 43       	mov.b	#1,	r5	;r3 As==01
+    fc34:	36 40 00 02 	mov	#512,	r6	;#0x0200
+    fc38:	38 40 22 fd 	mov	#64802,	r8	;#0xfd22
+
+0000fc3c <.L6>:
+    fc3c:	0a 47       	mov	r7,	r10	;
+    fc3e:	37 52       	add	#8,	r7	;r2 As==11
+    fc40:	09 45       	mov	r5,	r9	;
+    fc42:	34 40 d2 fc 	mov	#64722,	r4	;#0xfcd2
+
+0000fc46 <.L5>:
+    fc46:	0c 4a       	mov	r10,	r12	;
+    fc48:	b0 12 c4 fd 	call	#64964		;#0xfdc4
+    fc4c:	0c 56       	add	r6,	r12	;
+    fc4e:	6c 4c       	mov.b	@r12,	r12	;
+    fc50:	88 12       	call	r8		;
+    fc52:	0c 4a       	mov	r10,	r12	;
+    fc54:	b0 12 52 fd 	call	#64850		;#0xfd52
+    fc58:	7c f0 0f 00 	and.b	#15,	r12	;#0x000f
+    fc5c:	0c 56       	add	r6,	r12	;
+    fc5e:	6c 4c       	mov.b	@r12,	r12	;
+    fc60:	88 12       	call	r8		;
+    fc62:	0c 4a       	mov	r10,	r12	;
+    fc64:	b0 12 5a fd 	call	#64858		;#0xfd5a
+    fc68:	7c f0 0f 00 	and.b	#15,	r12	;#0x000f
+    fc6c:	0c 56       	add	r6,	r12	;
+    fc6e:	6c 4c       	mov.b	@r12,	r12	;
+    fc70:	88 12       	call	r8		;
+    fc72:	0c 4a       	mov	r10,	r12	;
+    fc74:	7c f0 0f 00 	and.b	#15,	r12	;#0x000f
+    fc78:	0c 56       	add	r6,	r12	;
+    fc7a:	6c 4c       	mov.b	@r12,	r12	;
+    fc7c:	88 12       	call	r8		;
+    fc7e:	7c 40 0a 00 	mov.b	#10,	r12	;#0x000a
+    fc82:	88 12       	call	r8		;
+    fc84:	0c 49       	mov	r9,	r12	;
+    fc86:	84 12       	call	r4		;
+    fc88:	0c 4a       	mov	r10,	r12	;
+    fc8a:	b0 12 d8 fc 	call	#64728		;#0xfcd8
+    fc8e:	0c 4a       	mov	r10,	r12	;
+    fc90:	b0 12 e6 fc 	call	#64742		;#0xfce6
+    fc94:	7c 40 64 00 	mov.b	#100,	r12	;#0x0064
+    fc98:	b0 12 f2 fc 	call	#64754		;#0xfcf2
+    fc9c:	49 59       	rla.b	r9		;
+    fc9e:	39 f0 ff 00 	and	#255,	r9	;#0x00ff
+    fca2:	1a 53       	inc	r10		;
+    fca4:	0a 97       	cmp	r7,	r10	;
+    fca6:	cf 23       	jnz	$-96     	;abs 0xfc46
+    fca8:	30 40 3c fc 	br	#0xfc3c		;
+
+0000fcac <de1soc_init>:
+    fcac:	b2 40 80 5a 	mov	#23168,	&0x0120	;#0x5a80
+    fcb0:	20 01 
+    fcb2:	f2 43 22 00 	mov.b	#-1,	&0x0022	;r3 As==11
+    fcb6:	f2 43 2a 00 	mov.b	#-1,	&0x002a	;r3 As==11
+    fcba:	f2 43 1a 00 	mov.b	#-1,	&0x001a	;r3 As==11
+    fcbe:	f2 43 1e 00 	mov.b	#-1,	&0x001e	;r3 As==11
+    fcc2:	f2 43 32 00 	mov.b	#-1,	&0x0032	;r3 As==11
+    fcc6:	b0 12 14 fd 	call	#64788		;#0xfd14
+    fcca:	03 43       	nop			
+    fccc:	32 d2       	eint			
+    fcce:	03 43       	nop			
+    fcd0:	30 41       	ret			
+
+0000fcd2 <de1soc_ledr>:
+    fcd2:	c2 4c 21 00 	mov.b	r12,	&0x0021	;
+    fcd6:	30 41       	ret			
+
+0000fcd8 <de1soc_hexlo>:
+    fcd8:	c2 4c 19 00 	mov.b	r12,	&0x0019	;
+    fcdc:	b0 12 52 fd 	call	#64850		;#0xfd52
+    fce0:	c2 4c 1d 00 	mov.b	r12,	&0x001d	;
+    fce4:	30 41       	ret			
+
+0000fce6 <de1soc_hexhi>:
+    fce6:	c2 4c 31 00 	mov.b	r12,	&0x0031	;
+    fcea:	30 41       	ret			
+
+0000fcec <short_delay>:
+    fcec:	1c 83       	dec	r12		;
+    fcee:	fe 23       	jnz	$-2      	;abs 0xfcec
+    fcf0:	30 41       	ret			
+
+0000fcf2 <long_delay>:
+    fcf2:	0a 12       	push	r10		;
+    fcf4:	09 12       	push	r9		;
+    fcf6:	08 12       	push	r8		;
+    fcf8:	0a 4c       	mov	r12,	r10	;
+    fcfa:	39 40 ec fc 	mov	#64748,	r9	;#0xfcec
+    fcfe:	38 40 10 27 	mov	#10000,	r8	;#0x2710
+
+0000fd02 <.L3>:
+    fd02:	0a 93       	cmp	#0,	r10	;r3 As==00
+    fd04:	02 20       	jnz	$+6      	;abs 0xfd0a
+    fd06:	30 40 3c fd 	br	#0xfd3c		;
+
+0000fd0a <.L4>:
+    fd0a:	0c 48       	mov	r8,	r12	;
+    fd0c:	89 12       	call	r9		;
+    fd0e:	3a 53       	add	#-1,	r10	;r3 As==11
+    fd10:	30 40 02 fd 	br	#0xfd02		;
+
+0000fd14 <uartinit>:
+    fd14:	b2 40 b1 01 	mov	#433,	&0x0082	;#0x01b1
+    fd18:	82 00 
+    fd1a:	f2 40 11 00 	mov.b	#17,	&0x0080	;#0x0011
+    fd1e:	80 00 
+    fd20:	30 41       	ret			
+
+0000fd22 <putchar>:
+    fd22:	7d 40 81 00 	mov.b	#129,	r13	;#0x0081
+
+0000fd26 <.L3>:
+    fd26:	fd b2 00 00 	bit.b	#8,	0(r13)	;r2 As==11
+    fd2a:	fd 23       	jnz	$-4      	;abs 0xfd26
+    fd2c:	c2 4c 84 00 	mov.b	r12,	&0x0084	;
+    fd30:	4c 43       	clr.b	r12		;
+    fd32:	30 41       	ret			
+
+0000fd34 <__mspabi_func_epilog_7>:
+    fd34:	34 41       	pop	r4		;
+
+0000fd36 <__mspabi_func_epilog_6>:
+    fd36:	35 41       	pop	r5		;
+
+0000fd38 <__mspabi_func_epilog_5>:
+    fd38:	36 41       	pop	r6		;
+
+0000fd3a <__mspabi_func_epilog_4>:
+    fd3a:	37 41       	pop	r7		;
+
+0000fd3c <__mspabi_func_epilog_3>:
+    fd3c:	38 41       	pop	r8		;
+
+0000fd3e <__mspabi_func_epilog_2>:
+    fd3e:	39 41       	pop	r9		;
+
+0000fd40 <__mspabi_func_epilog_1>:
+    fd40:	3a 41       	pop	r10		;
+    fd42:	30 41       	ret			
+
+0000fd44 <__mspabi_srai_15>:
+    fd44:	0c 11       	rra	r12		;
+
+0000fd46 <__mspabi_srai_14>:
+    fd46:	0c 11       	rra	r12		;
+
+0000fd48 <__mspabi_srai_13>:
+    fd48:	0c 11       	rra	r12		;
+
+0000fd4a <__mspabi_srai_12>:
+    fd4a:	0c 11       	rra	r12		;
+
+0000fd4c <__mspabi_srai_11>:
+    fd4c:	0c 11       	rra	r12		;
+
+0000fd4e <__mspabi_srai_10>:
+    fd4e:	0c 11       	rra	r12		;
+
+0000fd50 <__mspabi_srai_9>:
+    fd50:	0c 11       	rra	r12		;
+
+0000fd52 <__mspabi_srai_8>:
+    fd52:	0c 11       	rra	r12		;
+
+0000fd54 <__mspabi_srai_7>:
+    fd54:	0c 11       	rra	r12		;
+
+0000fd56 <__mspabi_srai_6>:
+    fd56:	0c 11       	rra	r12		;
+
+0000fd58 <__mspabi_srai_5>:
+    fd58:	0c 11       	rra	r12		;
+
+0000fd5a <__mspabi_srai_4>:
+    fd5a:	0c 11       	rra	r12		;
+
+0000fd5c <__mspabi_srai_3>:
+    fd5c:	0c 11       	rra	r12		;
+
+0000fd5e <__mspabi_srai_2>:
+    fd5e:	0c 11       	rra	r12		;
+
+0000fd60 <__mspabi_srai_1>:
+    fd60:	0c 11       	rra	r12		;
+    fd62:	30 41       	ret			
+
+0000fd64 <.L11>:
+    fd64:	3d 53       	add	#-1,	r13	;r3 As==11
+    fd66:	0c 11       	rra	r12		;
+
+0000fd68 <__mspabi_srai>:
+    fd68:	0d 93       	cmp	#0,	r13	;r3 As==00
+    fd6a:	fc 23       	jnz	$-6      	;abs 0xfd64
+    fd6c:	30 41       	ret			
+
+0000fd6e <__mspabi_sral_15>:
+    fd6e:	0d 11       	rra	r13		;
+    fd70:	0c 10       	rrc	r12		;
+
+0000fd72 <__mspabi_sral_14>:
+    fd72:	0d 11       	rra	r13		;
+    fd74:	0c 10       	rrc	r12		;
+
+0000fd76 <__mspabi_sral_13>:
+    fd76:	0d 11       	rra	r13		;
+    fd78:	0c 10       	rrc	r12		;
+
+0000fd7a <__mspabi_sral_12>:
+    fd7a:	0d 11       	rra	r13		;
+    fd7c:	0c 10       	rrc	r12		;
+
+0000fd7e <__mspabi_sral_11>:
+    fd7e:	0d 11       	rra	r13		;
+    fd80:	0c 10       	rrc	r12		;
+
+0000fd82 <__mspabi_sral_10>:
+    fd82:	0d 11       	rra	r13		;
+    fd84:	0c 10       	rrc	r12		;
+
+0000fd86 <__mspabi_sral_9>:
+    fd86:	0d 11       	rra	r13		;
+    fd88:	0c 10       	rrc	r12		;
+
+0000fd8a <__mspabi_sral_8>:
+    fd8a:	0d 11       	rra	r13		;
+    fd8c:	0c 10       	rrc	r12		;
+
+0000fd8e <__mspabi_sral_7>:
+    fd8e:	0d 11       	rra	r13		;
+    fd90:	0c 10       	rrc	r12		;
+
+0000fd92 <__mspabi_sral_6>:
+    fd92:	0d 11       	rra	r13		;
+    fd94:	0c 10       	rrc	r12		;
+
+0000fd96 <__mspabi_sral_5>:
+    fd96:	0d 11       	rra	r13		;
+    fd98:	0c 10       	rrc	r12		;
+
+0000fd9a <__mspabi_sral_4>:
+    fd9a:	0d 11       	rra	r13		;
+    fd9c:	0c 10       	rrc	r12		;
+
+0000fd9e <__mspabi_sral_3>:
+    fd9e:	0d 11       	rra	r13		;
+    fda0:	0c 10       	rrc	r12		;
+
+0000fda2 <__mspabi_sral_2>:
+    fda2:	0d 11       	rra	r13		;
+    fda4:	0c 10       	rrc	r12		;
+
+0000fda6 <__mspabi_sral_1>:
+    fda6:	0d 11       	rra	r13		;
+    fda8:	0c 10       	rrc	r12		;
+    fdaa:	30 41       	ret			
+
+0000fdac <.L12>:
+    fdac:	3e 53       	add	#-1,	r14	;r3 As==11
+    fdae:	0d 11       	rra	r13		;
+    fdb0:	0c 10       	rrc	r12		;
+
+0000fdb2 <__mspabi_sral>:
+    fdb2:	0e 93       	cmp	#0,	r14	;r3 As==00
+    fdb4:	fb 23       	jnz	$-8      	;abs 0xfdac
+    fdb6:	30 41       	ret			
+
+0000fdb8 <__mspabi_srli_15>:
+    fdb8:	12 c3       	clrc			
+    fdba:	0c 10       	rrc	r12		;
+
+0000fdbc <__mspabi_srli_14>:
+    fdbc:	12 c3       	clrc			
+    fdbe:	0c 10       	rrc	r12		;
+
+0000fdc0 <__mspabi_srli_13>:
+    fdc0:	12 c3       	clrc			
+    fdc2:	0c 10       	rrc	r12		;
+
+0000fdc4 <__mspabi_srli_12>:
+    fdc4:	12 c3       	clrc			
+    fdc6:	0c 10       	rrc	r12		;
+
+0000fdc8 <__mspabi_srli_11>:
+    fdc8:	12 c3       	clrc			
+    fdca:	0c 10       	rrc	r12		;
+
+0000fdcc <__mspabi_srli_10>:
+    fdcc:	12 c3       	clrc			
+    fdce:	0c 10       	rrc	r12		;
+
+0000fdd0 <__mspabi_srli_9>:
+    fdd0:	12 c3       	clrc			
+    fdd2:	0c 10       	rrc	r12		;
+
+0000fdd4 <__mspabi_srli_8>:
+    fdd4:	12 c3       	clrc			
+    fdd6:	0c 10       	rrc	r12		;
+
+0000fdd8 <__mspabi_srli_7>:
+    fdd8:	12 c3       	clrc			
+    fdda:	0c 10       	rrc	r12		;
+
+0000fddc <__mspabi_srli_6>:
+    fddc:	12 c3       	clrc			
+    fdde:	0c 10       	rrc	r12		;
+
+0000fde0 <__mspabi_srli_5>:
+    fde0:	12 c3       	clrc			
+    fde2:	0c 10       	rrc	r12		;
+
+0000fde4 <__mspabi_srli_4>:
+    fde4:	12 c3       	clrc			
+    fde6:	0c 10       	rrc	r12		;
+
+0000fde8 <__mspabi_srli_3>:
+    fde8:	12 c3       	clrc			
+    fdea:	0c 10       	rrc	r12		;
+
+0000fdec <__mspabi_srli_2>:
+    fdec:	12 c3       	clrc			
+    fdee:	0c 10       	rrc	r12		;
+
+0000fdf0 <__mspabi_srli_1>:
+    fdf0:	12 c3       	clrc			
+    fdf2:	0c 10       	rrc	r12		;
+    fdf4:	30 41       	ret			
+
+0000fdf6 <.L11>:
+    fdf6:	3d 53       	add	#-1,	r13	;r3 As==11
+    fdf8:	12 c3       	clrc			
+    fdfa:	0c 10       	rrc	r12		;
+
+0000fdfc <__mspabi_srli>:
+    fdfc:	0d 93       	cmp	#0,	r13	;r3 As==00
+    fdfe:	fb 23       	jnz	$-8      	;abs 0xfdf6
+    fe00:	30 41       	ret			
+
+0000fe02 <__mspabi_srll_15>:
+    fe02:	12 c3       	clrc			
+    fe04:	0d 10       	rrc	r13		;
+    fe06:	0c 10       	rrc	r12		;
+
+0000fe08 <__mspabi_srll_14>:
+    fe08:	12 c3       	clrc			
+    fe0a:	0d 10       	rrc	r13		;
+    fe0c:	0c 10       	rrc	r12		;
+
+0000fe0e <__mspabi_srll_13>:
+    fe0e:	12 c3       	clrc			
+    fe10:	0d 10       	rrc	r13		;
+    fe12:	0c 10       	rrc	r12		;
+
+0000fe14 <__mspabi_srll_12>:
+    fe14:	12 c3       	clrc			
+    fe16:	0d 10       	rrc	r13		;
+    fe18:	0c 10       	rrc	r12		;
+
+0000fe1a <__mspabi_srll_11>:
+    fe1a:	12 c3       	clrc			
+    fe1c:	0d 10       	rrc	r13		;
+    fe1e:	0c 10       	rrc	r12		;
+
+0000fe20 <__mspabi_srll_10>:
+    fe20:	12 c3       	clrc			
+    fe22:	0d 10       	rrc	r13		;
+    fe24:	0c 10       	rrc	r12		;
+
+0000fe26 <__mspabi_srll_9>:
+    fe26:	12 c3       	clrc			
+    fe28:	0d 10       	rrc	r13		;
+    fe2a:	0c 10       	rrc	r12		;
+
+0000fe2c <__mspabi_srll_8>:
+    fe2c:	12 c3       	clrc			
+    fe2e:	0d 10       	rrc	r13		;
+    fe30:	0c 10       	rrc	r12		;
+
+0000fe32 <__mspabi_srll_7>:
+    fe32:	12 c3       	clrc			
+    fe34:	0d 10       	rrc	r13		;
+    fe36:	0c 10       	rrc	r12		;
+
+0000fe38 <__mspabi_srll_6>:
+    fe38:	12 c3       	clrc			
+    fe3a:	0d 10       	rrc	r13		;
+    fe3c:	0c 10       	rrc	r12		;
+
+0000fe3e <__mspabi_srll_5>:
+    fe3e:	12 c3       	clrc			
+    fe40:	0d 10       	rrc	r13		;
+    fe42:	0c 10       	rrc	r12		;
+
+0000fe44 <__mspabi_srll_4>:
+    fe44:	12 c3       	clrc			
+    fe46:	0d 10       	rrc	r13		;
+    fe48:	0c 10       	rrc	r12		;
+
+0000fe4a <__mspabi_srll_3>:
+    fe4a:	12 c3       	clrc			
+    fe4c:	0d 10       	rrc	r13		;
+    fe4e:	0c 10       	rrc	r12		;
+
+0000fe50 <__mspabi_srll_2>:
+    fe50:	12 c3       	clrc			
+    fe52:	0d 10       	rrc	r13		;
+    fe54:	0c 10       	rrc	r12		;
+
+0000fe56 <__mspabi_srll_1>:
+    fe56:	12 c3       	clrc			
+    fe58:	0d 10       	rrc	r13		;
+    fe5a:	0c 10       	rrc	r12		;
+    fe5c:	30 41       	ret			
+
+0000fe5e <.L12>:
+    fe5e:	3e 53       	add	#-1,	r14	;r3 As==11
+    fe60:	12 c3       	clrc			
+    fe62:	0d 10       	rrc	r13		;
+    fe64:	0c 10       	rrc	r12		;
+
+0000fe66 <__mspabi_srll>:
+    fe66:	0e 93       	cmp	#0,	r14	;r3 As==00
+    fe68:	fa 23       	jnz	$-10     	;abs 0xfe5e
+    fe6a:	30 41       	ret			
+
+0000fe6c <memmove>:
+    fe6c:	0b 4c       	mov	r12,	r11	;
+    fe6e:	0b 5e       	add	r14,	r11	;
+
+0000fe70 <.Loc.69.1>:
+    fe70:	0d 9c       	cmp	r12,	r13	;
+    fe72:	09 28       	jnc	$+20     	;abs 0xfe86
+
+0000fe74 <.L4>:
+    fe74:	0e 4c       	mov	r12,	r14	;
+
+0000fe76 <.L3>:
+    fe76:	0b 9e       	cmp	r14,	r11	;
+    fe78:	10 24       	jz	$+34     	;abs 0xfe9a
+
+0000fe7a <.LVL3>:
+    fe7a:	ee 4d 00 00 	mov.b	@r13,	0(r14)	;
+    fe7e:	1e 53       	inc	r14		;
+
+0000fe80 <.LVL4>:
+    fe80:	1d 53       	inc	r13		;
+    fe82:	30 40 76 fe 	br	#0xfe76		;
+
+0000fe86 <.L2>:
+    fe86:	0f 4d       	mov	r13,	r15	;
+    fe88:	0f 5e       	add	r14,	r15	;
+    fe8a:	0c 9f       	cmp	r15,	r12	;
+    fe8c:	f3 2f       	jc	$-24     	;abs 0xfe74
+
+0000fe8e <.LVL6>:
+    fe8e:	0d 4f       	mov	r15,	r13	;
+
+0000fe90 <.LVL7>:
+    fe90:	0e 8f       	sub	r15,	r14	;
+
+0000fe92 <.L5>:
+    fe92:	0f 4d       	mov	r13,	r15	;
+    fe94:	0f 5e       	add	r14,	r15	;
+    fe96:	0f 93       	cmp	#0,	r15	;r3 As==00
+    fe98:	01 20       	jnz	$+4      	;abs 0xfe9c
+
+0000fe9a <.L9>:
+    fe9a:	30 41       	ret			
+
+0000fe9c <.L6>:
+    fe9c:	3b 53       	add	#-1,	r11	;r3 As==11
+    fe9e:	3d 53       	add	#-1,	r13	;r3 As==11
+
+0000fea0 <.LVL12>:
+    fea0:	eb 4d 00 00 	mov.b	@r13,	0(r11)	;
+    fea4:	30 40 92 fe 	br	#0xfe92		;
